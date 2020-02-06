@@ -22,23 +22,11 @@
           </nav>
 </header>
 
-<p id = "code">
-  from os import listdir<br>
-  from os.path import isfile, join<br>
-  import os<br>
-  def createFolder(directory):<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;try:<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if not os.path.exists(directory):<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.makedirs(directory)<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;except OSError:<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('Error: Creating directory. ' + directory)<br>
-  onlyfiles = [f for f in listdir(\"C:\\Users\\Abhinav\\OneDrive\\Desktop\\abhinavgor.com\") if isfile(join(\"C:\\Users\\Abhinav\\OneDrive\\Desktop\\abhinavgor.com\", f))]<br>
-  for i in courseCodes:<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;createFolder(str('C:\\Users\\Abhinav\\OneDrive\\Desktop\\Child\\' + i + '\\'))"<br>
-  </p>
 <input type="text" id="cCode"></input>
 <input type="button" id="button1" value="Add Course" onclick="add_element_to_array();"></input>
 <input type="button" id="button2" value="Display Added Courses" onclick="display_array();"></input>
+<br><br>
+<input type = "button" id = "clearCookies" value = "Clear Cookies" onclick = "clearCookies();"></input>
 <br><br>
 <input type = "button" id = "submit" value = "Submit" onclick = "getCourses();"></input>
 <div id="Result"></div>
@@ -53,7 +41,7 @@ var courses = Array();
 function add_element_to_array()
 {
 courses[x] = '\'' + document.getElementById("cCode").value + '\'';
-alert("Element: " + courses[x] + " Added at index " + x);
+alert("Course: " + courses[x] + " is added.");
 x++;
 document.getElementById("cCode").value = "";
 }
@@ -64,7 +52,7 @@ var e = "<hr/>";
 
 for (var y=0; y<courses.length; y++)
 {
-e += "Element " + y + " = " + courses[y] + "<br/>";
+e += "Course " + (y + 1) + " = " + courses[y] + "<br/>";
 }
 document.getElementById("Result").innerHTML = e;
 }
@@ -84,6 +72,22 @@ displaySetting = 'block';
 </script>
 
 <p id = 'd'></p>
+
+
+<p id = "code">
+    from os import listdir<br>
+    from os.path import isfile, join<br>
+    import os<br>
+    def createFolder(directory):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;try:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if not os.path.exists(directory):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.makedirs(directory)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;except OSError:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('Error: Creating directory. ' + directory)<br>
+    onlyfiles = [f for f in listdir(\"C:\\Users\\Abhinav\\OneDrive\\Desktop\\abhinavgor.com\") if isfile(join(\"C:\\Users\\Abhinav\\OneDrive\\Desktop\\abhinavgor.com\", f))]<br>
+    for i in courseCodes:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;createFolder(str('C:\\Users\\Abhinav\\OneDrive\\Desktop\\Child\\' + i + '\\'))"<br>
+    </p>
 
 </body>
 </html>

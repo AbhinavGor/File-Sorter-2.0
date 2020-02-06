@@ -39,7 +39,7 @@ var courses = Array();
 function add_element_to_array()
 {
 courses[x] = '\'' + document.getElementById("cCode").value + '\'';
-alert("Element: " + courses[x] + " Added at index " + x);
+alert("Course: " + courses[x] + " is added.");
 x++;
 document.getElementById("cCode").value = "";
 }
@@ -50,7 +50,7 @@ var e = "<hr/>";
 
 for (var y=0; y<courses.length; y++)
 {
-e += "Element " + y + " = " + courses[y] + "<br/>";
+e += "Course " + (y + 1) + " = " + courses[y] + "<br/>";
 }
 document.getElementById("Result").innerHTML = e;
 }

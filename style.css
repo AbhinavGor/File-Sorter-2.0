@@ -65,3 +65,80 @@ nav {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #EBF5FC;
+
+}
+.form{
+  margin: 20px;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  padding: 40px 40px 60px;
+  background: #EBF5FC;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: -5px -5px 10px rgba(255,255,255,0.05),
+              5px 5px 15px  rgba(0,0,0,0.5);
+}
+.form h2{
+  color: #c7c7c7;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.form .input{
+  text-align: left;
+  margin-top: 40px;
+}
+
+.form .input .inputbox label{
+  display: block;
+  color: #868686;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.form .input .inputbox input{
+  width: 100%;
+  height: 50px;
+  background: #EBF5FC;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  padding: 5px 15px;
+  color: #FFF;
+  font-size: 18px;
+  color:#999;
+  box-shadow: inset -2px -2px 6px rgba(255,255,255,1),
+              inset 2px 2px 6px rgba(0,0,0,0.1);
+
+}
+
+.form .input .inputbox input[type = "button"]
+{
+  margin-top: 20px;
+  box-shadow: -2px -2px 6px rgba(255,255,255,1),
+               2px 2px 6px rgba(0,0,0,0.1);
+}
+
+.form .input .inputbox input[type = "button"]:active{
+  color: #006c9c;
+  margin-top: 20px;
+  box-shadow: inset -2px -2px 6px rgba(255,255,255,1),
+              inset 2px 2px 6px rgba(0,0,0,0.1);
+
+}

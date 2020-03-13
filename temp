@@ -1,0 +1,17 @@
+<p id = 'd'></p>
+
+
+<p id = "code">
+    from os import listdir<br>
+    from os.path import isfile, join<br>
+    import os<br>
+    def createFolder(directory):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;try:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if not os.path.exists(directory):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.makedirs(directory)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;except OSError:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('Error: Creating directory. ' + directory)<br>
+    onlyfiles = [f for f in listdir(\"C:\\Users\\Abhinav\\OneDrive\\Desktop\\abhinavgor.com\") if isfile(join(\"C:\\Users\\Abhinav\\OneDrive\\Desktop\\abhinavgor.com\", f))]<br>
+    for i in courseCodes:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;createFolder(str('C:\\Users\\Abhinav\\OneDrive\\Desktop\\Child\\' + i + '\\'))"<br>
+    </p>

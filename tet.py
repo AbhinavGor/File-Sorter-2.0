@@ -1,0 +1,2 @@
+lst = ['p',]
+print(lst)
